@@ -8,7 +8,7 @@
     <link href="/2024/02/19/solve-windows-ogg-bug/"/>
     <url>/2024/02/19/solve-windows-ogg-bug/</url>
     
-    <content type="html"><![CDATA[<p style="text-decoration:line-through;">（不愧为bugwin……）</p><p><b>注:Windows 10 22H2可完美解决此问题。Windows11暂未测试，欢迎大家在下面留言分享测试结果。</b></p><h1 id="问题复现">问题复现</h1><p>今天玩tts的时候发现一个音频文件是 .ogg格式的，但由于文件名太乱了，所以准备先给它改名成1.ogg。但改完的时候发现了窗口突然卡死： <imgsrc="https://s2.loli.net/2024/02/25/x36Eh9QMnOpYGzR.png"alt="explorer.exe 未响应" /></p><p>把整个文件夹删除也不行： <imgsrc="https://s2.loli.net/2024/02/25/ecr8KnIY1XZQVsu.png"alt="删除文件卡在 0%" /></p><h1 id="原因分析">原因分析</h1><p>经过网路搜索之后，发现这是因为当进入有 .OGG文件的时候会调用一个叫「Web媒体扩展」的小插件，来获取ogg文件的一些信息。但是这个插件的性能极差，才导致了这次BUG 的发生。</p><h1 id="解决方案">解决方案</h1><p>按住【Windows 徽标键】+【i】打开「设置」，选择「应用」，找到「Web媒体扩展」并点击「卸载」即可。 <imgsrc="https://s2.loli.net/2024/02/25/oluBQ1JUMGL28OZ.png"alt="卸载「Web 媒体扩展」" />卸载完成之后，再去对OGG文件进行更名、删除、移动等操作就畅通无阻了。</p>]]></content>
+    <content type="html"><![CDATA[<p style="text-decoration:line-through;">（不愧为bugwin……）</p><p><b>注:Windows 10 22H2可完美解决此问题。Windows11暂未测试，欢迎大家在下面留言分享测试结果。</b></p><h1 id="问题复现">问题复现</h1><p>今天玩tts的时候发现一个音频文件是 .ogg格式的，但由于文件名太乱了，所以准备先给它改名成1.ogg。但改完的时候发现了窗口突然卡死： <imgsrc="https://s2.loli.net/2024/02/25/x36Eh9QMnOpYGzR.png"alt="explorer.exe 未响应" /></p><p>把整个文件夹删除也不行： <imgsrc="https://s2.loli.net/2024/02/25/ecr8KnIY1XZQVsu.png"alt="删除文件卡在 0%" /></p><h1 id="原因分析">原因分析</h1><p>经过网络搜索之后，发现这是因为当进入有 .OGG文件的文件夹时，会调用一个叫「Web媒体扩展」的小插件，来获取ogg文件的一些信息。但是这个插件的性能极差，才导致了这次BUG 的发生。</p><h1 id="解决方案">解决方案</h1><p>按住【Windows 徽标键】+【i】打开「设置」，选择「应用」，找到「Web媒体扩展」并点击「卸载」即可。 <imgsrc="https://s2.loli.net/2024/02/25/oluBQ1JUMGL28OZ.png"alt="卸载「Web 媒体扩展」" />卸载完成之后，再去对OGG文件进行更名、删除、移动等操作就畅通无阻了。</p>]]></content>
     
     
     
