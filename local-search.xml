@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>awesome-go-zh</title>
+    <link href="/2024/03/05/awesome-go-zh/"/>
+    <url>/2024/03/05/awesome-go-zh/</url>
+    
+    <content type="html"><![CDATA[<p>近日准备将 (awesome-go)[https://github.com/avelino/awesome-go]翻译下来，目前放在了我的子站 (go.liedou.cc)[https://go.liedou.cc]。</p><p>这个项目收录了很多 Golang 优质的第三方库。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>docs</category>
+      
+      <category>Goland</category>
+      
+      <category>Go</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>docs</tag>
+      
+      <tag>文档</tag>
+      
+      <tag>golang</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux 的「time」命令在 Windows 中的替代品</title>
     <link href="/2024/03/04/alt-time-command-in-windows/"/>
     <url>/2024/03/04/alt-time-command-in-windows/</url>
