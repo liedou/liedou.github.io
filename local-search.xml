@@ -4,23 +4,23 @@
   
   
   <entry>
-    <title>重 大 通 知</title>
+    <title>关于本博客未来规划的重大通知</title>
     <link href="/2024/04/01/An-Esstential-Decision/"/>
     <url>/2024/04/01/An-Esstential-Decision/</url>
     
-    <content type="html"><![CDATA[<p>因个人因素，以后更新文章的时间会完全随机。重心变了，以后会很少把时间和精力放到更新博客上去。希望大家能够理解。</p>]]></content>
+    <content type="html"><![CDATA[<p>由于本人的规划发生改变，以后会很少把时间和精力放到更新博客上去，因此更新文章的时间会完全随机。希望大家能够理解。</p>]]></content>
     
     
     <categories>
       
-      <category>杂谈</category>
+      <category>公告</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>杂谈</tag>
+      <tag>公告</tag>
       
     </tags>
     
@@ -54,11 +54,11 @@
   
   
   <entry>
-    <title>awesome-go-zh</title>
+    <title>awesome-go-zh 中文版</title>
     <link href="/2024/03/05/awesome-go-zh/"/>
     <url>/2024/03/05/awesome-go-zh/</url>
     
-    <content type="html"><![CDATA[<p>近日准备将 <ahref="https://github.com/avelino/awesome-go">awesome-go</a>翻译下来，目前放在了我的子站 <ahref="https://go.liedou.cc">go.liedou.cc</a>。</p><p>Tips: 这个项目收录了很多 Golang 优质的第三方库。</p>]]></content>
+    <content type="html"><![CDATA[<p>近日准备将 <ahref="https://github.com/avelino/awesome-go">awesome-go</a>翻译下来，目前放在了我的子站 <ahref="https://go.liedou.cc">go.liedou.cc</a>。</p><p><strong>此页面会不定时更新。</strong></p><blockquote><p>Tips: 这个项目收录了很多 Golang 优质的第三方库。</p></blockquote>]]></content>
     
     
     <categories>
