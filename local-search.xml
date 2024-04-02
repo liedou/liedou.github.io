@@ -8,7 +8,7 @@
     <link href="/2024/04/02/configure-c-and-cpp-compiler-in-vscode/"/>
     <url>/2024/04/02/configure-c-and-cpp-compiler-in-vscode/</url>
     
-    <content type="html"><![CDATA[<h1 id="前言">前言</h1><h1 id="前置知识">前置知识</h1><h1 id="开始配置">开始配置</h1><h2 id="从-dev-c-配置环境变量">从 Dev-C++ 配置环境变量</h2><h2 id="将-mingwmingw-w64-添加到环境变量windows">将 MinGW/MinGW-w64添加到环境变量(Windows)</h2><h2 id="将-gccg-添加到环境变量linuxmac">将 gcc/g++添加到环境变量(Linux/Mac)</h2><h2 id="从-msvccl.exe-配置环境变量windows">从 MSVC(cl.exe)配置环境变量(Windows)</h2><h2 id="从-clangllvm-配置环境变量windowslinuxmac">从 clang(llvm)配置环境变量(Windows/Linux/Mac)</h2><h1 id="总结">总结</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>TODO</p><h1 id="前置知识">前置知识</h1><h1 id="开始配置">开始配置</h1><h2 id="从-dev-c-配置环境变量">从 Dev-C++ 配置环境变量</h2><h2 id="将-mingwmingw-w64-添加到环境变量windows">将 MinGW/MinGW-w64添加到环境变量(Windows)</h2><h2 id="将-gccg-添加到环境变量linuxmac">将 gcc/g++添加到环境变量(Linux/Mac)</h2><h2 id="从-msvccl.exe-配置环境变量windows">从 MSVC(cl.exe)配置环境变量(Windows)</h2><h2 id="从-clangllvm-配置环境变量windowslinuxmac">从 clang(llvm)配置环境变量(Windows/Linux/Mac)</h2><h1 id="总结">总结</h1>]]></content>
     
     
     <categories>
