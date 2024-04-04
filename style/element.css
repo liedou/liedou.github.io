@@ -4,7 +4,7 @@ code {
 
 .index-card:nth-child(even) .index-img {
     order: 2;
-   }
+}
 
 /* 深色模式下的样式 */
 /* @media (prefers-color-scheme: dark) {
