@@ -6,6 +6,67 @@ code {
     order: 2;
 }
 
+.index-img {
+	transition: .4s;
+}
+
+.index-card:hover .index-img {
+	transform: scale(1.10);
+}
+
+html { 
+	cursor: url(/img/cursor/Arrow.cur),auto;/* url地址可以是链接，相对位置，绝对位置 */
+	background-color: @theme_background;  /* 写成透明就行 */
+}
+
+/* 封面大图 */
+.banner {
+	cursor: url(/img/cursor/Arrow.cur),auto;
+	background-color: @theme_background;
+}
+
+/* 封面向下 */
+.scroll-down-bar {
+	cursor: url(/img/cursor/Hand2.cur),auto; /* 一个小手 */
+	background-color: @theme_background;
+}
+
+/* 所有可跳转链接 */
+a[href] {
+	cursor: url(/img/cursor/Hand2.cur),auto !important;
+	background-color: @theme_background;
+}
+
+/* 搜索框关闭按钮  */
+#local-search-close.close {
+	cursor: url(/img/cursor/Hand2.cur),auto;
+	background-color: @theme_background;
+}
+
+/* 搜索框、输入框 */
+input,textarea {
+	cursor: url(/img/cursor/IBeam.cur),auto;    /* 这里应该是竖条光标 */
+	background-color: @theme_background;
+}
+
+/* 代码复制键 按钮键增加!important属性后可删 */
+.copy-btn.copy-btn-light {
+	cursor: url(/img/cursor/Hand2.cur),auto;
+	background-color: @theme_background;
+}
+
+/* 按钮 */
+button[class] {
+	cursor: url(/img/cursor/Hand2.cur),auto !important;
+	background-color: @theme_background;
+}
+
+/* 补充按钮 */
+svg {
+	cursor: url(/img/cursor/Hand2.cur),auto !important;
+	background-color: rgba(0, 0, 0, 0.0);
+}
+
 /* 深色模式下的样式 */
 /* @media (prefers-color-scheme: dark) {
     code.origin {
