@@ -1,0 +1,18 @@
+code {
+    color: #e83e8c;
+}
+
+/* 深色模式下的样式 */
+/* @media (prefers-color-scheme: dark) {
+    code.origin {
+        color: aliceblue;
+    }    
+} */
+  
+  /* 浅色模式下的样式 */
+/* @media (prefers-color-scheme: light) {
+    code.origin {
+        color: #3c4858;
+    }    
+}   */
+
