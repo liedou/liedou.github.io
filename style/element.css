@@ -50,7 +50,7 @@ input,textarea {
 }
 
 /* 代码复制键 按钮键增加!important属性后可删 */
-.copy-btn.copy-btn-light {
+.copy-btn {
 	cursor: url(/img/cursor/Hand2.cur),auto;
 	background-color: @theme_background;
 }
