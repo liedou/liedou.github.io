@@ -253,7 +253,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.6k 个字
+          1.7k 个字
         
       </span>
     
@@ -372,19 +372,22 @@ IDE，但它可以通过安装强大的的扩展来达到 IDE 的效果。</stro
 <p>　　配置环境变量会因不同平台而异，本篇文章主要讨论如何在 Windows
 操作系统上配置 <code>gcc</code> 或 <code>g++</code> 编译器。</p>
 <h2 id="从-dev-c-配置环境变量">从 Dev-C++ 配置环境变量</h2>
-<p>　　Dev-C++是一个轻量级C/C++集成开发环境，它内置了编辑器、编译器和连接器，提供语法高亮，还有多样的调试功能。相比与其他C/C++集成开发环境，Dev-C++具有功能简洁、便于使用的优点。</p>
-<p>　　以下教程以 Dev-C++ 5.9.2 为例。</p>
+<p>　　Dev-C++是一个轻量级的
+<code>C/C++ 集成开发环境</code>，它内置了编辑器、编译器和连接器，提供语法高亮，还有多样的调试功能。相比与其他
+<code>C/C++ 集成开发环境</code>，Dev-C++具有功能简洁、易上手等优点，深受广大用户的喜爱。</p>
+<p>　　<strong>以下教程以 Dev-C++ 5.9.2
+为例，其他版本大同小异。</strong></p>
 <h3 id="step-1-定位-gccg-编译器目录">Step 1: 定位 gcc/g++
 编译器目录</h3>
 <p>　　打开 Dev-C++ 的安装目录，如下图所示。（若无法找到，可右键 Dev-C++
 的快捷方式，然后点击「打开文件所在位置」）</p>
 <figure>
 <img
-src="/img/builtin/configure-c-and-cpp-compiler-in-vscode/devcpp_installation_directory.webp" srcset="/img/loading.gif" lazyload
+src="/builtin/configure-c-and-cpp-compiler-in-vscode/devcpp_installation_directory.webp" srcset="/img/loading.gif" lazyload
 alt="Dev-C++ 的安装目录" />
 <figcaption aria-hidden="true">Dev-C++ 的安装目录</figcaption>
 </figure>
-<p>　　然后依次打开「MinGW64」-&gt;「bin」，如下图所示。</p>
+<p>　　然后依次打开文件夹「MinGW64」-&gt;「bin」，如下图所示。</p>
 <figure>
 <img
 src="/img/builtin/configure-c-and-cpp-compiler-in-vscode/devcpp_mingw_binary_directory.webp" srcset="/img/loading.gif" lazyload
@@ -400,7 +403,8 @@ alt="复制这串路径" />
 <figcaption aria-hidden="true">复制这串路径</figcaption>
 </figure>
 <h3 id="step-2-配置系统环境变量">Step 2: 配置系统环境变量</h3>
-<p>　　前面说到，环境变量的作用就是给系统提供一个可以随时调用的变量。如果我们将一个文件夹添加至环境变量，那么这个文件夹里的所有程序都会被添加到环境变量。所以，我们需要做的，就是将刚才复制下来的路径添加到环境变量。这样，无论什么程序都可以调用编译器了。</p>
+<p>　　前面说到，环境变量的作用就是给系统提供一个可以随时调用的变量。如果我们将一个文件夹添加至环境变量，那么这个文件夹里的所有程序都会被添加到环境变量。所以，我们需要做的，就是将刚才复制下来的路径添加到环境变量。这样，无论什么程序（当然也包括
+VS Code）都可以调用编译器了。</p>
 <p>　　按住 <i class="fa fa-windows"></i> + R 打开「运行」，输入
 <code>sysdm.cpl</code> 后点击「确定」。</p>
 <figure>
@@ -759,7 +763,7 @@ Visual Studio Code
     <div class="footer-inner">
   
     <div class="footer-content">
-       <br><span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
+       <span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
     </div>
   
   

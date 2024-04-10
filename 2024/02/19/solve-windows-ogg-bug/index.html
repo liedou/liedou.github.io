@@ -251,7 +251,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          244 个字
+          269 个字
         
       </span>
     
@@ -316,24 +316,26 @@
                 <p style="text-decoration:line-through;">
 （不愧为bugwin……）
 </p>
-<p><b>注:Windows 10 22H2可完美解决此问题。Windows
-11暂未测试，欢迎大家在下面留言分享测试结果。</b></p>
+<p><strong>注: Windows 10 22H2 可完美解决此问题。Windows
+11暂未测试，欢迎读者发留言分享测试结果。</strong></p>
 <h1 id="问题复现">问题复现</h1>
-<p>今天玩tts的时候发现一个音频文件是 .ogg
+<p>今天玩 tts 的时候发现一个音频文件是 .ogg
 格式的，但由于文件名太乱了，所以准备先给它改名成
 1.ogg。但改完的时候发现了窗口突然卡死： <img
 src="https://s2.loli.net/2024/02/26/Xj3WbtnF6wZflPm.webp" srcset="/img/loading.gif" lazyload
 alt="explorer.exe 未响应" /></p>
-<p>把整个文件夹删除也不行： <img
+<p>把整个文件夹删除也不行（删除卡在 0%）： <img
 src="https://s2.loli.net/2024/02/26/f7jR6DkQcS4FdwA.webp" srcset="/img/loading.gif" lazyload
 alt="删除文件卡在 0%" /></p>
 <h1 id="原因分析">原因分析</h1>
 <p>经过网络搜索之后，发现这是因为当进入有 .OGG
 文件的文件夹时，会调用一个叫「Web
-媒体扩展」的小插件，来获取ogg文件的一些信息。但是这个插件的性能极差，才导致了这次
+媒体扩展」的插件，用来获取ogg文件的一些信息。但是这个插件的性能极差，才导致了这次
 BUG 的发生。</p>
 <h1 id="解决方案">解决方案</h1>
-<p>按住【Windows 徽标键】+【i】打开「设置」，选择「应用」，找到「Web
+<p>鉴于此插件的作用不大，且使用频率极低，可考虑将此插件卸载。</p>
+<p>按住 <i class="fa fa-windows"></i>
++【i】打开「设置」，选择「应用」，找到「Web
 媒体扩展」并点击「卸载」即可。 <img
 src="https://s2.loli.net/2024/02/26/SnzL36WCRHbepd5.webp" srcset="/img/loading.gif" lazyload
 alt="卸载「Web 媒体扩展」" />
@@ -580,7 +582,7 @@ alt="卸载「Web 媒体扩展」" />
     <div class="footer-inner">
   
     <div class="footer-content">
-       <br><span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
+       <span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
     </div>
   
   

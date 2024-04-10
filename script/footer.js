@@ -8,7 +8,7 @@ function createtime() {
     mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
     seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
     snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-    document.getElementById("timeDate").innerHTML = "🚀本站已夹缝中生存 "+ dnum +" 天 "; 
+    document.getElementById("timeDate").innerHTML = "🚀本站已正常运行 "+ dnum +" 天 "; 
     document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
     // document.getElementById("currentYear").innerHTML =  
 } 

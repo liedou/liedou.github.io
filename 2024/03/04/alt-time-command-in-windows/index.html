@@ -249,7 +249,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          176 个字
+          178 个字
         
       </span>
     
@@ -312,17 +312,18 @@
               <div class="markdown-body">
                 
                 <p>相信大家对 Linux 中的 <code>time</code>
-命令都不陌生吧，它可以计算命令的运行时间。例如： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ZSH">$ time go run hello.go<br>Hello, world!<br>go run hello.go  0.64s user 0.33s system 143% cpu 0.674 total<br></code></pre></td></tr></table></figure></p>
+命令都不陌生吧，它可以计算命令的运行时间。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs BASH">$ time go run hello.go<br>Hello, world!<br>go run hello.go  0.64s user 0.33s system 143% cpu 0.674 total<br></code></pre></td></tr></table></figure>
 <p>那么 Windows 有没有类似的命令呢？答案是有的。</p>
 <p>在 <code>Windows Powershell</code> 中，可以使用
 <code>Measure-Command</code> 命令来查看命令的运行时间。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Powershell"><span class="hljs-built_in">Measure-Command</span> &#123; YOUR_COMMAND_HERE &#125;<br></code></pre></td></tr></table></figure>
 <p>以下是一个简单的例子：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs Powershell"><span class="hljs-built_in">PS</span> C:\users\mclie&gt; <span class="hljs-built_in">Measure-Command</span> &#123;go run hello.go | <span class="hljs-built_in">Out-Default</span>&#125;<br>Hello, world!<br><br><br>Days              : <span class="hljs-number">0</span><br>Hours             : <span class="hljs-number">0</span><br>Minutes           : <span class="hljs-number">0</span><br>Seconds           : <span class="hljs-number">0</span><br>Milliseconds      : <span class="hljs-number">582</span><br>Ticks             : <span class="hljs-number">5828546</span><br>TotalDays         : <span class="hljs-number">6.74600231481481</span>E<span class="hljs-literal">-06</span><br>TotalHours        : <span class="hljs-number">0.000161904055555556</span><br>TotalMinutes      : <span class="hljs-number">0.00971424333333333</span><br>TotalSeconds      : <span class="hljs-number">0.5828546</span><br>TotalMilliseconds : <span class="hljs-number">582.8546</span><br></code></pre></td></tr></table></figure>
-<p>在上面的例子中，我们执行了 <code>go run hello.go</code> 并指定
-<code>Out-Default</code> 参数来让 Powershell
-输出命令结果（不指定则不输出），最终可以观察到运行该命令花费了 0.5828546
-秒。</p>
+<p>在上面的例子中，我们执行了 <code>go run hello.go</code>
+并将管道发送给 <code>Out-Default</code> 来让 Powershell
+输出命令结果（不指定则不输出），最终可以观察到运行该命令花费了
+<code>0.5828546 秒</code>。</p>
 
                 
               </div>
@@ -567,7 +568,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <br><span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
+       <span id="timeDate">天数载入中</span><span id="times">...</span><br> <p>Copyright © 2024 <span id="currentYear"></span> NekoLieh, All Rights Reserved.</p> 
     </div>
   
   
