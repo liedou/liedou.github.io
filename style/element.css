@@ -2,9 +2,16 @@ code {
     color: #e83e8c;
 }
 
-.index-card:nth-child(even) .index-img {
+/* .index-img img {
+	width: 100%;
+} */
+
+/* .index-card:nth-child(odd) .index-img {
     order: 2;
 }
+.index-card:nth-child(even) .index-img {
+    order: 2;
+} */
 
 .index-img {
 	transition: .4s;

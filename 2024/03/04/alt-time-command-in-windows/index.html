@@ -18,20 +18,20 @@
   <meta name="author" content="NekoLieh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文介绍了一个在 Windows 中类似 Linux 里 time 的命令。">
+    <meta name="description" content="本文介绍了一个在 Windows 中计算程序运行时间的命令（类似于 Bash 中的 time）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 的「time」命令在 Windows 中的替代品">
 <meta property="og:url" content="https://www.liedou.cc/2024/03/04/alt-time-command-in-windows/index.html">
 <meta property="og:site_name" content="NekoLiehの博客">
-<meta property="og:description" content="本文介绍了一个在 Windows 中类似 Linux 里 time 的命令。">
+<meta property="og:description" content="本文介绍了一个在 Windows 中计算程序运行时间的命令（类似于 Bash 中的 time）">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.liedou.cc/img/cover/tux_head.webp">
+<meta property="og:image" content="https://www.liedou.cc/img/cover/powershell.webp">
 <meta property="article:published_time" content="2024-03-03T16:41:49.000Z">
 <meta property="article:modified_time" content="2024-03-03T16:41:49.000Z">
 <meta property="article:author" content="NekoLieh">
 <meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.liedou.cc/img/cover/tux_head.webp">
+<meta name="twitter:image" content="https://www.liedou.cc/img/cover/powershell.webp">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -249,7 +249,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          178 个字
+          217 个字
         
       </span>
     
@@ -311,19 +311,20 @@
             
               <div class="markdown-body">
                 
-                <p>相信大家对 Linux 中的 <code>time</code>
-命令都不陌生吧，它可以计算命令的运行时间。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs BASH">$ time go run hello.go<br>Hello, world!<br>go run hello.go  0.64s user 0.33s system 143% cpu 0.674 total<br></code></pre></td></tr></table></figure>
-<p>那么 Windows 有没有类似的命令呢？答案是有的。</p>
+                <p>相信大家对 Bash 中的 <code>time</code>
+命令都不陌生吧，它可以计算程序运行所占用的资源情况。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs BASH">$ time ./hello.sh <span class="hljs-comment"># hello.sh 是自定义脚本文件</span><br>Hello, world! ^_^<br>./hello.sh  0.00s user 0.00s system 0% cpu 0.006 total<br></code></pre></td></tr></table></figure>
+<p>那么在 Windows 中有没有类似的命令呢？当然有啦~~</p>
 <p>在 <code>Windows Powershell</code> 中，可以使用
-<code>Measure-Command</code> 命令来查看命令的运行时间。</p>
+<code>Measure-Command</code> 命令来查看命令运行所花费的时间。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Powershell"><span class="hljs-built_in">Measure-Command</span> &#123; YOUR_COMMAND_HERE &#125;<br></code></pre></td></tr></table></figure>
 <p>以下是一个简单的例子：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs Powershell"><span class="hljs-built_in">PS</span> C:\users\mclie&gt; <span class="hljs-built_in">Measure-Command</span> &#123;go run hello.go | <span class="hljs-built_in">Out-Default</span>&#125;<br>Hello, world!<br><br><br>Days              : <span class="hljs-number">0</span><br>Hours             : <span class="hljs-number">0</span><br>Minutes           : <span class="hljs-number">0</span><br>Seconds           : <span class="hljs-number">0</span><br>Milliseconds      : <span class="hljs-number">582</span><br>Ticks             : <span class="hljs-number">5828546</span><br>TotalDays         : <span class="hljs-number">6.74600231481481</span>E<span class="hljs-literal">-06</span><br>TotalHours        : <span class="hljs-number">0.000161904055555556</span><br>TotalMinutes      : <span class="hljs-number">0.00971424333333333</span><br>TotalSeconds      : <span class="hljs-number">0.5828546</span><br>TotalMilliseconds : <span class="hljs-number">582.8546</span><br></code></pre></td></tr></table></figure>
-<p>在上面的例子中，我们执行了 <code>go run hello.go</code>
-并将管道发送给 <code>Out-Default</code> 来让 Powershell
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs Powershell"><span class="hljs-built_in">PS</span> C:\users\mclie&gt; <span class="hljs-built_in">Measure-Command</span> &#123;.\hello.bat | <span class="hljs-built_in">Out-Default</span>&#125;<br>Hello, world!<br><br><br>Days              : <span class="hljs-number">0</span><br>Hours             : <span class="hljs-number">0</span><br>Minutes           : <span class="hljs-number">0</span><br>Seconds           : <span class="hljs-number">0</span><br>Milliseconds      : <span class="hljs-number">17</span><br>Ticks             : <span class="hljs-number">177755</span><br>TotalDays         : <span class="hljs-number">2.05734953703704</span>E<span class="hljs-literal">-07</span><br>TotalHours        : <span class="hljs-number">4.93763888888889</span>E<span class="hljs-literal">-06</span><br>TotalMinutes      : <span class="hljs-number">0.000296258333333333</span><br>TotalSeconds      : <span class="hljs-number">0.0177755</span><br>TotalMilliseconds : <span class="hljs-number">17.7755</span><br></code></pre></td></tr></table></figure>
+<p>在上面的例子中，我们执行了
+<code>.\hello.bat</code>（一个自定义的批处理脚本）并透过管道将输出内容传给
+<code>Out-Default</code> 来让 Powershell
 输出命令结果（不指定则不输出），最终可以观察到运行该命令花费了
-<code>0.5828546 秒</code>。</p>
+<code>0.0177755 秒</code>。</p>
 
                 
               </div>
