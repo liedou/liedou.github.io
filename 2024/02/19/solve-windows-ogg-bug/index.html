@@ -20,9 +20,9 @@
   
     <meta name="description" content="这个 BUG 我真的无力吐槽...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决 Win 10 操作 OGG 文件时发生卡顿的 BUG">
+<meta property="og:title" content="解决 Win10 操作 OGG 文件时发生卡顿的 BUG">
 <meta property="og:url" content="https://www.liedou.cc/2024/02/19/solve-windows-ogg-bug/index.html">
-<meta property="og:site_name" content="NekoLiehの博客">
+<meta property="og:site_name" content="NekoLiehの小破站">
 <meta property="og:description" content="这个 BUG 我真的无力吐槽...">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.liedou.cc/img/cover/file_ogg.webp">
@@ -39,7 +39,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>解决 Win 10 操作 OGG 文件时发生卡顿的 BUG - NekoLiehの博客</title>
+  <title>解决 Win10 操作 OGG 文件时发生卡顿的 BUG - NekoLiehの小破站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +108,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>NekoLiehの博客</strong>
+      <strong>NekoLiehの小破站</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -222,7 +222,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">解决 Win 10 操作 OGG 文件时发生卡顿的 BUG</span>
+            <span id="subtitle">解决 Win10 操作 OGG 文件时发生卡顿的 BUG</span>
           
         </div>
 
@@ -251,7 +251,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          269 个字
+          288 个字
         
       </span>
     
@@ -308,25 +308,31 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">解决 Win 10 操作 OGG 文件时发生卡顿的 BUG</h1>
+            <h1 id="seo-header">解决 Win10 操作 OGG 文件时发生卡顿的 BUG</h1>
             
             
               <div class="markdown-body">
                 
-                <p style="text-decoration:line-through;">
-（不愧为bugwin……）
-</p>
+                <p><span class="heimu" style="text-decoration:line-through;"
+title="你知道的太多了">（不愧为bugwin……） </span></p>
 <p><strong>注: Windows 10 22H2 可完美解决此问题。Windows
 11暂未测试，欢迎读者发留言分享测试结果。</strong></p>
 <h1 id="问题复现">问题复现</h1>
 <p>今天玩 tts 的时候发现一个音频文件是 .ogg
 格式的，但由于文件名太乱了，所以准备先给它改名成
-1.ogg。但改完的时候发现了窗口突然卡死： <img
-src="https://s2.loli.net/2024/02/26/Xj3WbtnF6wZflPm.webp" srcset="/img/loading.gif" lazyload
-alt="explorer.exe 未响应" /></p>
-<p>把整个文件夹删除也不行（删除卡在 0%）： <img
-src="https://s2.loli.net/2024/02/26/f7jR6DkQcS4FdwA.webp" srcset="/img/loading.gif" lazyload
-alt="删除文件卡在 0%" /></p>
+1.ogg。但改完的时候发现了窗口突然卡死：</p>
+<figure>
+<img src="/img/builtin/solve-windows-ogg-bug/dead_explorer.webp" srcset="/img/loading.gif" lazyload
+alt="explorer.exe 未响应" />
+<figcaption aria-hidden="true">explorer.exe 未响应</figcaption>
+</figure>
+<p>把整个文件夹删除也不行（删除卡在 0%）：</p>
+<figure>
+<img
+src="/img/builtin/solve-windows-ogg-bug/cannot_delete_directory.webp" srcset="/img/loading.gif" lazyload
+alt="删除文件卡在 0%" />
+<figcaption aria-hidden="true">删除文件卡在 0%</figcaption>
+</figure>
 <h1 id="原因分析">原因分析</h1>
 <p>经过网络搜索之后，发现这是因为当进入有 .OGG
 文件的文件夹时，会调用一个叫「Web
@@ -336,10 +342,14 @@ BUG 的发生。</p>
 <p>鉴于此插件的作用不大，且使用频率极低，可考虑将此插件卸载。</p>
 <p>按住 <i class="fa fa-windows"></i>
 +【i】打开「设置」，选择「应用」，找到「Web
-媒体扩展」并点击「卸载」即可。 <img
-src="https://s2.loli.net/2024/02/26/SnzL36WCRHbepd5.webp" srcset="/img/loading.gif" lazyload
+媒体扩展」并点击「卸载」即可。</p>
+<figure>
+<img
+src="/img/builtin/solve-windows-ogg-bug/delete_web_media_extension.webp" srcset="/img/loading.gif" lazyload
 alt="卸载「Web 媒体扩展」" />
-卸载完成之后，再去对OGG文件进行更名、删除、移动等操作就畅通无阻了。</p>
+<figcaption aria-hidden="true">卸载「Web 媒体扩展」</figcaption>
+</figure>
+<p>卸载完成之后，再去对OGG文件进行更名、删除、移动等操作就畅通无阻了。</p>
 
                 
               </div>
@@ -396,7 +406,7 @@ alt="卸载「Web 媒体扩展」" />
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>解决 Win 10 操作 OGG 文件时发生卡顿的 BUG</div>
+      <div>解决 Win10 操作 OGG 文件时发生卡顿的 BUG</div>
       <div>https://www.liedou.cc/2024/02/19/solve-windows-ogg-bug/</div>
     </div>
     <div class="license-meta">

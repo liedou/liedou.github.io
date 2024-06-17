@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 VS Code 中配置 C&#x2F;C++ 编译器">
 <meta property="og:url" content="https://www.liedou.cc/2024/04/02/configure-c-and-cpp-compiler-in-vscode/index.html">
-<meta property="og:site_name" content="NekoLiehの博客">
+<meta property="og:site_name" content="NekoLiehの小破站">
 <meta property="og:description" content="本文介绍了如何在 Visual Studio Code 中配置 C&#x2F;C++ 编译器。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.liedou.cc/img/cover/vscode.webp">
@@ -30,10 +30,10 @@
 <meta property="article:modified_time" content="2024-04-02T04:45:14.000Z">
 <meta property="article:author" content="NekoLieh">
 <meta property="article:tag" content="环境变量">
-<meta property="article:tag" content="VS Code">
 <meta property="article:tag" content="配置">
 <meta property="article:tag" content="c">
 <meta property="article:tag" content="c++">
+<meta property="article:tag" content="vs code">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.liedou.cc/img/cover/vscode.webp">
   
@@ -41,7 +41,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>在 VS Code 中配置 C/C++ 编译器 - NekoLiehの博客</title>
+  <title>在 VS Code 中配置 C/C++ 编译器 - NekoLiehの小破站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -110,7 +110,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>NekoLiehの博客</strong>
+      <strong>NekoLiehの小破站</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -322,10 +322,10 @@ target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Visual_Studio
 <p>Visual Studio Code（简称 VS
 Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件以扩展的方式支持语法高亮、代码自动补全（又称
 IntelliSense）、代码重构功能，并且内置了命令行工具和 Git
-版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装其他扩展以拓展软件功能。<br></p>
+版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装其他扩展以拓展软件功能。</p>
 </blockquote>
 <p>既然它这么强大，那我们今天就来学习如何在 VS Code 中配置 C/C++。</p>
-<h1 id="前置知识">前置知识</h1>
+<h1 id="前置知识可忽略">前置知识（可忽略）</h1>
 <p>　　以下是笔者认为读者必须了解的一些前置知识。</p>
 <p>　　要想在 VS Code 里配置好 C/C++
 编译器，那么掌握这些内容是必不可少的。至少，读者可以知道自己在做什么。</p>
@@ -342,7 +342,8 @@ Studio（注意这不是<code>Visual Studio Code</code>），JetBrains公司的I
 <p><strong>Visual Studio Code 虽然不是
 IDE，但它可以通过安装强大的的扩展来达到 IDE 的效果。</strong></p>
 <h2 id="环境变量">2. 环境变量</h2>
-<p>　　环境变量，就相当于C/C++里的宏定义，只不过它一般是给操作系统使用的。</p>
+<p>　　环境变量，就相当于 C/C++
+里的宏定义（只是类似，不完全相同），只不过它一般是给操作系统使用的。</p>
 <p>　　例如，在 C/C++ 中，使用无符号长整型每次都要打
 <code>unsigned long long</code>
 实在是太长了，而且代码里需要用到很多次。这时候就要用到宏，只需要在头文件后面加上
@@ -559,13 +560,13 @@ Visual Studio Code
       
         <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="print-no-link">#环境变量</a>
       
-        <a href="/tags/VS-Code/" class="print-no-link">#VS Code</a>
-      
         <a href="/tags/%E9%85%8D%E7%BD%AE/" class="print-no-link">#配置</a>
       
         <a href="/tags/c/" class="print-no-link">#c</a>
       
         <a href="/tags/c/" class="print-no-link">#c++</a>
+      
+        <a href="/tags/vs-code/" class="print-no-link">#vs code</a>
       
     </div>
   
@@ -621,6 +622,12 @@ Visual Studio Code
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/06/17/solve-unsupported-intel-vt-x/" title="解决 VMware 无法开启 Intel VT-x 的问题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解决 VMware 无法开启 Intel VT-x 的问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

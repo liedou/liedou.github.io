@@ -18,28 +18,29 @@
   <meta name="author" content="NekoLieh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="近日准备将 awesome-go 翻译下来，目前放在了我的子站 go.liedou.cc。 此页面会不定时更新。  Tips: 这个项目收录了很多 Golang 优质的第三方库。">
+    <meta name="description" content="解决在 VMware Workstation Pro 无法使用 Intel VT-x 虚拟化技术正常启动虚拟机的问题。Intel VT-x 是一项虚拟化技术，开启后可增强虚拟机功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="awesome-go-zh 中文版">
-<meta property="og:url" content="https://www.liedou.cc/2024/03/05/awesome-go-zh/index.html">
+<meta property="og:title" content="解决 VMware 无法开启 Intel VT-x 的问题">
+<meta property="og:url" content="https://www.liedou.cc/2024/06/17/solve-unsupported-intel-vt-x/index.html">
 <meta property="og:site_name" content="NekoLiehの小破站">
-<meta property="og:description" content="近日准备将 awesome-go 翻译下来，目前放在了我的子站 go.liedou.cc。 此页面会不定时更新。  Tips: 这个项目收录了很多 Golang 优质的第三方库。">
+<meta property="og:description" content="解决在 VMware Workstation Pro 无法使用 Intel VT-x 虚拟化技术正常启动虚拟机的问题。Intel VT-x 是一项虚拟化技术，开启后可增强虚拟机功能。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.liedou.cc/img/cover/awesome_go.webp">
-<meta property="article:published_time" content="2024-03-05T05:13:39.000Z">
-<meta property="article:modified_time" content="2024-03-05T05:13:39.000Z">
+<meta property="og:image" content="https://www.liedou.cc/img/cover/vmware.webp">
+<meta property="article:published_time" content="2024-06-17T11:00:19.000Z">
+<meta property="article:modified_time" content="2024-06-17T11:00:19.000Z">
 <meta property="article:author" content="NekoLieh">
-<meta property="article:tag" content="docs">
-<meta property="article:tag" content="文档">
-<meta property="article:tag" content="golang">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="solution">
+<meta property="article:tag" content="vmware">
+<meta property="article:tag" content="virtual machine">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.liedou.cc/img/cover/awesome_go.webp">
+<meta name="twitter:image" content="https://www.liedou.cc/img/cover/vmware.webp">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>awesome-go-zh 中文版 - NekoLiehの小破站</title>
+  <title>解决 VMware 无法开启 Intel VT-x 的问题 - NekoLiehの小破站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,7 +223,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">awesome-go-zh 中文版</span>
+            <span id="subtitle">解决 VMware 无法开启 Intel VT-x 的问题</span>
           
         </div>
 
@@ -238,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-05 13:13" pubdate>
-          2024-03-05 13:13:39
+        <time datetime="2024-06-17 19:00" pubdate>
+          2024-06-17 19:00:19
         </time>
       </span>
     
@@ -251,7 +252,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          50 个字
+          446 个字
         
       </span>
     
@@ -263,7 +264,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -308,19 +309,71 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">awesome-go-zh 中文版</h1>
+            <h1 id="seo-header">解决 VMware 无法开启 Intel VT-x 的问题</h1>
             
             
               <div class="markdown-body">
                 
-                <p>近日准备将 <a
-target="_blank" rel="noopener" href="https://github.com/avelino/awesome-go">awesome-go</a>
-翻译下来，目前放在了我的子站 <a
-target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</p>
-<p><strong>此页面会不定时更新。</strong></p>
+                <h1 id="问题重现">问题重现</h1>
 <blockquote>
-<p>Tips: 这个项目收录了很多 Golang 优质的第三方库。</p>
+<p>Intel VT-x
+是英特尔公司开发的一种虚拟化技术，启用它可以使虚拟机减少卡顿、性能提升等优化。</p>
 </blockquote>
+<p>我在 VMware Workstation Pro 给虚拟机启用 <code>Intel VT-x</code>
+后，虚拟机无法正常启动，如下图所示。</p>
+<figure>
+<img
+src="/img/builtin/solve-unsupported-intel-vt-x/unsupport-intel-vt-x.webp" srcset="/img/loading.gif" lazyload
+alt="「此平台不支持虚拟化的 Intel VT-x/EPT。不使用虚拟化的Intel VT-x/EPT，是否继续？」" />
+<figcaption aria-hidden="true">「此平台不支持虚拟化的 Intel
+VT-x/EPT。不使用虚拟化的Intel VT-x/EPT，是否继续？」</figcaption>
+</figure>
+<p>这时有两种选择：</p>
+<ul>
+<li>如果选择“否”，那么虚拟机将不会启动。</li>
+<li>如果选择“是”，虚拟机当然也不会启动 <span class="heimu"
+style="text-decoration:line-through;"
+title="你知道的太多了">读者：这不废话</span>，并弹出下面的提示框。</li>
+</ul>
+<figure>
+<img
+src="/img/builtin/solve-unsupported-intel-vt-x/cannot-launch-virtual-machine.webp" srcset="/img/loading.gif" lazyload
+alt="「VMware Workstation 在此主机上不支持嵌套虚拟化。模块“HV”启动失败。未能启动虚拟机。」" />
+<figcaption aria-hidden="true">「VMware Workstation
+在此主机上不支持嵌套虚拟化。模块“HV”启动失败。未能启动虚拟机。」</figcaption>
+</figure>
+<h1 id="原因分析">原因分析</h1>
+<p>因为微软家的 Hyper-V 与 VMware Workstation Pro
+之间是冲突的，所以你不能二者兼得啦。因此，如果你要使用 VMware
+并开启英特尔虚拟化技术（<span class="heimu">AMD:
+原来我被遗忘了T_T哭</span>），就必须要舍弃 Hyper-V。</p>
+<p><strong>亿点点提醒：关闭 Hyper-V 会导致 WSL2 无法正常使用!! 但 WSL1
+可以哦。</strong></p>
+<h1 id="解决方案">解决方案</h1>
+<p><strong>再次提醒：关闭 Hyper-V 会导致 WSL2 无法正常使用，但 WSL1
+可以哦。</strong></p>
+<p>右键 <i class="fa fa-windows"></i>（开始菜单），然后点击
+<code>Windows PowerShell (管理员)</code>（或
+<code>命令提示符(管理员)</code>
+）输入下面的命令。注意哦，一定要点<strong>管理员</strong>的那个选项啦，否则接下来的操作都会无效呢。</p>
+<figure>
+<img
+src="/img/builtin/solve-unsupported-intel-vt-x/run-powershell-as-administrator.webp" srcset="/img/loading.gif" lazyload
+alt="右键开始菜单，打开Windows Powershell(管理员)" />
+<figcaption aria-hidden="true">右键开始菜单，打开Windows
+Powershell(管理员)</figcaption>
+</figure>
+<p>复制粘贴下面的命令，然后按回车键执行。可以看到操作成功啦。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Powershell">bcdedit /<span class="hljs-built_in">set</span> hypervisorlaunchtype off<br></code></pre></td></tr></table></figure>
+<figure>
+<img
+src="/img/builtin/solve-unsupported-intel-vt-x/run-command-in-powershell.webp" srcset="/img/loading.gif" lazyload
+alt="执行命令成功" />
+<figcaption aria-hidden="true">执行命令成功</figcaption>
+</figure>
+<p>接下来<strong>重启PC</strong>。一定要<em>重启</em>才能生效，而不是先关机再开机。</p>
+<p>重启好后 VMware Workstation Pro 就可以使用 <code>Intel VT-x</code>
+启动虚拟机啦，当然啦，WSL2 和 Hyper-V 也暴毙了呢~</p>
 
                 
               </div>
@@ -339,12 +392,12 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
     
       <span class="category-chain">
         
-  <a href="/categories/docs/" class="category-chain-item">docs</a>
+  <a href="/categories/Windows/" class="category-chain-item">Windows</a>
   
   
     <span>></span>
     
-  <a href="/categories/docs/Go/" class="category-chain-item">Go</a>
+  <a href="/categories/Windows/Windows-10/" class="category-chain-item">Windows 10</a>
   
   
 
@@ -356,15 +409,8 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
+  <a href="/categories/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF-Virtualization/" class="category-chain-item">虚拟化技术 (Virtualization)</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%BC%96%E7%A8%8B/Go/" class="category-chain-item">Go</a>
-  
-  
-
   
 
       </span>
@@ -378,11 +424,13 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/docs/" class="print-no-link">#docs</a>
+        <a href="/tags/windows/" class="print-no-link">#windows</a>
       
-        <a href="/tags/%E6%96%87%E6%A1%A3/" class="print-no-link">#文档</a>
+        <a href="/tags/solution/" class="print-no-link">#solution</a>
       
-        <a href="/tags/golang/" class="print-no-link">#golang</a>
+        <a href="/tags/vmware/" class="print-no-link">#vmware</a>
+      
+        <a href="/tags/virtual-machine/" class="print-no-link">#virtual machine</a>
       
     </div>
   
@@ -394,8 +442,8 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>awesome-go-zh 中文版</div>
-      <div>https://www.liedou.cc/2024/03/05/awesome-go-zh/</div>
+      <div>解决 VMware 无法开启 Intel VT-x 的问题</div>
+      <div>https://www.liedou.cc/2024/06/17/solve-unsupported-intel-vt-x/</div>
     </div>
     <div class="license-meta">
       
@@ -407,7 +455,7 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月5日</div>
+          <div>2024年6月17日</div>
         </div>
       
       
@@ -439,18 +487,12 @@ target="_blank" rel="noopener" href="https://go.liedou.cc">go.liedou.cc</a>。</
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/21/a-story-about-wall/" title="一堵墙的故事">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一堵墙的故事</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/04/alt-time-command-in-windows/" title="Linux 的「time」命令在 Windows 中的替代品">
-                        <span class="hidden-mobile">Linux 的「time」命令在 Windows 中的替代品</span>
+                      <a href="/2024/04/02/configure-c-and-cpp-compiler-in-vscode/" title="在 VS Code 中配置 C/C++ 编译器">
+                        <span class="hidden-mobile">在 VS Code 中配置 C/C++ 编译器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
