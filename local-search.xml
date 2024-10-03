@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>用 UEFI+GPT 安装 Windows 操作系统</title>
+    <link href="/2024/10/03/install-windows-10-with-uefi-and-gpt/"/>
+    <url>/2024/10/03/install-windows-10-with-uefi-and-gpt/</url>
+    
+    <content type="html"><![CDATA[<p>事情的起因是我一直在当作系统盘的hdd读写速度太慢了，每次开机都要等好久，而且用的是传统的legacy启动，开机速度就更慢了。因此今天我准备用GPT+UEFI 的组合，用现代的方案安装Windows 10 Pro22H2（其它系统大同小异），大幅提升开机速度。</p><h1 id="准备工作">准备工作</h1><h2 id="准备-pe">准备 PE</h2><blockquote><p>关于 PE 是什么，可以去维基百科查看详情：<ahref="https://w.wiki/BPhs">Windows预先安装环境</a></p></blockquote><p>鉴于此次我们需要把硬盘分区表改为GPT，所以我建议在U盘上安装PE来操作。市面上的PE五花八门，装机小白可能一不小心就选了某些「不干净」的PE。对此，我墙裂推荐<a href="https://www.wepe.com.cn/">微PE(wepe.com.cn)</a>（不是广告！！），简洁、免费，最重要的是可以一键安装进U盘。进入微PE官网后点击「下载」，这里建议选第一个V2.3版本。如果你的机器过旧，也可以选择V1.3旧版。</p><figure><img src="/img/builtin/install-windows-10-with-uefi-and-gpt/wepe.webp"alt="微PE下载官网" /><figcaption aria-hidden="true">微PE下载官网</figcaption></figure><p>查看下载地址会弹出一个捐赠的对话框，有能力的读者可以赞助一下。不想捐赠也可以点击「先不捐赠」。这里建议选择64位下载安装。</p><p>打开微PE程序后点击右下角「U盘安装」，选择好自己的U盘，剩下的选项默认即可。唯一需要注意的是文件系统要选择exFAT 或者 NTFS ，否则 FAT32 不能装下 ≥ 4 GB的文件（这非常重要，因为现在的Windows镜像文件大小普遍大于这个数字）。点击「立即安装」就开始了。<spanstyle="color: red;"><strong>注意，此过程会清空U盘所有数据，请自行做好数据备份。</strong></span></p><p><imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/wepe_udisk.webp"alt="点击右下角U盘安装" /> <imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/wepe_default_settings.webp"alt="大部分设置默认即可" /></p><p>安装过程需要等待较长时间，取决于你的U盘读写速率。完成后可以在此电脑里看到 U盘「分裂」了，其中一个是EFI分区，另一个是刚刚在微PE里「U盘卷标」设置的，这样就算是成功了。</p><figure><imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/udisk_partition_apart.webp"alt="U盘变成两个分区" /><figcaption aria-hidden="true">U盘变成两个分区</figcaption></figure><h2 id="准备系统-iso-镜像">准备系统 ISO 镜像</h2><p>ISO 是个什么东东呢？如今大部分的操作系统安装都会给你提供一个ISO，你可以把它想像成一个光盘💿（ISO也确实能当光盘用），要安装的操作系统就贮存在这里面。</p><p>下载镜像最好去微软官网下载，谁知道第三方下载的有没有捆绑呢？</p><ul><li><ahref="https://www.microsoft.com/zh-cn/software-download/windows10">下载Windows 10</a></li><li><ahref="https://www.microsoft.com/zh-cn/software-download/windows11">下载Windows 11</a></li></ul><p>几点小建议：</p><ul><li>建议下载「多版本 ISO」，而不是「家庭中文版」。</li><li>如果要下载 Windows 10，可以打开 DevTools，然后启用设备仿真功能，刷新后就可以愉快下载 ISO 了。</li></ul><figure><imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/toggle_device_emulation.webp"alt="打开dev tools，启用设备仿真功能" /><figcaption aria-hidden="true">打开devtools，启用设备仿真功能</figcaption></figure><p>下载好之后，把 ISO 文件塞进 U 盘里就大功告成了。准备正式重装系统。<imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/copy_iso_to_udisk.webp"alt="将镜像文件复制进U盘" /></p><h1 id="开始装机">开始装机</h1><p>关机后插上U盘，开机进入BIOS设置，把第一启动项改为U盘，保存设置后重启。进入到PE后，打开DiskGenius分区工具。<img src="/img/builtin/install-windows-10-with-uefi-and-gpt/dg.webp"alt="分区软件DiskGenius" /></p><p>选中需要分区的硬盘，点击上方「快速分区」。 <imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/fast_part.webp"alt="点击快速分区" /></p><p>分区表改为「GPT(GUID)」，分区数量根据自己需要调整，我这里选择1个。其它选项默认即可。<imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/partition_setting.webp"alt="分区设定" /></p><p>点击「确定」开始格式化硬盘。同样会<strong>清空</strong>所有数据，注意数据备份。</p><p>打开WinNTSetup（今天的主角），可以看到有很多选项。我们主要动这几个设置，如图所示。<imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/winntsetup.webp"alt="WinNTSetup 图解" /></p><p>点击开始安装。安装速度取决于硬盘和U盘的读写速率。</p><p>这时候提示是否重启，我们先拔掉U盘，然后点击「重启」。 <imgsrc="/img/builtin/install-windows-10-with-uefi-and-gpt/restart_box.webp"alt="提示是否重启" /></p><p>重启后应该会直接进入Windows的oobe，也就是欢迎界面，并让你配置一些东西。如果显示的是「BOOTMGRIS MISSING」，说明UEFI设置可能未启用，或者Windows BootManager不是第一启动项。这时就要重启并在BIOS里调整相应设置。</p><p>以上就是最基本的安装系统教程。</p><p><span class="heimu" style="text-decoration:line-through;"title="你知道的太多了">写完这篇博客，我也应该进入半退休状态了。有缘再见。</span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Windows</category>
+      
+      <category>Windows 10</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>解决 VMware 无法开启 Intel VT-x 的问题</title>
     <link href="/2024/06/17/solve-unsupported-intel-vt-x/"/>
     <url>/2024/06/17/solve-unsupported-intel-vt-x/</url>
@@ -48,11 +75,11 @@
     
     <categories>
       
+      <category>编程</category>
+      
       <category>Visual Studio Code</category>
       
       <category>环境配置</category>
-      
-      <category>编程</category>
       
       <category>C</category>
       

@@ -1,0 +1,1 @@
+let bannerContainer=$("#banner"),viewBg=$("#web_bg"),bannerMask=$("#banner .mask"),bg=$(bannerContainer).css("background-image"),color=($(viewBg).css("background-image",bg),$(bannerContainer).css("background-image","url()"),$(bannerMask).css("background-color"));$(bannerMask).css("background-color","rgba(0,0,0,0)"),$(viewBg).css("background-color",color);
