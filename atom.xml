@@ -114,7 +114,7 @@
     <published>2024-03-21T13:43:11.000Z</published>
     <updated>2024-03-21T13:43:11.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一个男孩和墙的故事">一个男孩和「墙」的故事</h1><p>一堵墙。</p><p>男人看着这堵墙，从他还是个男孩的时候，到下巴上冒出细细的胡须，又到成为一个真正的男人。墙也从最坚固的样子慢慢衰颓。</p><p>这次一定要征服它，一定可以「征服」它。男人心想。</p><p>说来也奇怪，小时候与小伙伴玩闹，打赌谁能爬上这堵墙，男孩就从没赢过。不管用怎样的方法，甚至把家里的梯子搬出来，也没能成功爬上去，一次也没有。</p><p>久而久之，这堵墙成了男孩的心结，即使成年后，只要站在这堵墙前，就仍然是那个四五岁不服输的小男孩。</p><p>男人开始攀爬，这么多年来，他已经对墙砖的位置烂熟于心。哪一块砖微微凸出来，可以抓住或者作为落脚的地方，男人都了然于心。但他不明白为什么总是在最接近墙头的时候失败。</p>这次能够成功吗？<h1>世界本触手可及。</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="一个男孩和墙的故事">一个男孩和「墙」的故事</h1><p>一堵墙。</p><p>男人看着这堵墙，从他还是个男孩的时候，到下巴上冒出细细的胡须，又到成为一个真正的男人。墙也从最坚固的样子慢慢衰颓。</p><p>这次一定要征服它，一定可以「征服」它。男人心想。</p><p>说来也奇怪，小时候与小伙伴玩闹，打赌谁能爬上这堵墙，男孩就从没赢过。不管用怎样的方法，甚至把家里的梯子搬出来，也没能成功爬上去，一次也没有。</p><p>久而久之，这堵墙成了男孩的心结，即使成年后，只要站在这堵墙前，就仍然是那个四五岁不服输的小男孩。</p><p>男人开始攀爬，这么多年来，他已经对墙砖的位置烂熟于心。哪一块砖微微凸出来，可以抓住或者作为落脚的地方，男人都了然于心。但他不明白为什么总是在最接近墙头的时候失败。</p><p>这次能够成功吗？</p><p>世界本触手可及。</p>]]></content>
     
     
     <summary type="html">一个男孩和「墙」的故事</summary>
@@ -123,45 +123,10 @@
     
     <category term="杂谈" scheme="https://www.liedou.cc/categories/%E6%9D%82%E8%B0%88/"/>
     
-    
-    <category term="杂谈" scheme="https://www.liedou.cc/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>awesome-go-zh 中文版</title>
-    <link href="https://www.liedou.cc/2024/03/05/awesome-go-zh/"/>
-    <id>https://www.liedou.cc/2024/03/05/awesome-go-zh/</id>
-    <published>2024-03-05T05:13:39.000Z</published>
-    <updated>2024-03-05T05:13:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>近日准备将 <ahref="https://github.com/avelino/awesome-go">awesome-go</a>翻译下来，目前放在了我的子站 <ahref="https://go.liedou.cc">go.liedou.cc</a>。</p><p><strong>此页面会不定时更新。</strong></p><blockquote><p>Tips: 这个项目收录了很多 Golang 优质的第三方库。</p></blockquote>]]></content>
+    <category term="碎碎念" scheme="https://www.liedou.cc/categories/%E6%9D%82%E8%B0%88/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;近日准备将 &lt;a
-href=&quot;https://github.com/avelino/awesome-go&quot;&gt;awesome-go&lt;/a&gt;
-翻译下来，目前放在了我的子站 &lt;a
-href=&quot;https://go.liedou.cc&quot;&gt;go.liedou.cc&lt;/a&gt;。&lt;/</summary>
-      
-    
-    
-    
-    <category term="docs" scheme="https://www.liedou.cc/categories/docs/"/>
-    
-    <category term="Go" scheme="https://www.liedou.cc/categories/docs/Go/"/>
-    
-    <category term="编程" scheme="https://www.liedou.cc/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Go" scheme="https://www.liedou.cc/categories/%E7%BC%96%E7%A8%8B/Go/"/>
-    
-    
-    <category term="docs" scheme="https://www.liedou.cc/tags/docs/"/>
-    
-    <category term="文档" scheme="https://www.liedou.cc/tags/%E6%96%87%E6%A1%A3/"/>
-    
-    <category term="golang" scheme="https://www.liedou.cc/tags/golang/"/>
+    <category term="杂谈,碎碎念" scheme="https://www.liedou.cc/tags/%E6%9D%82%E8%B0%88-%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
   </entry>
   
