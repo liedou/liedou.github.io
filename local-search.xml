@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>2024年度总结</title>
+    <link href="/2025/01/01/2024-annual-summary/"/>
+    <url>/2025/01/01/2024-annual-summary/</url>
+    
+    <content type="html"><![CDATA[<p>2024 已悄然离去，迎接我们的是2025。在过去的一年里，我们有喜，有悲；有悲欢离合，有阴晴圆缺。一年间，经历了不少的人和事，也遇到了很多机遇与挑战。但无论是苦难与否、成功与否，我们都应该将它们化为2025 年前进的动力。</p><p>回想2024，我创建了这个博客，用来记录我在计算机科学中遇到的有趣的解决方案。虽然因现实学业问题，没有更新太多文章，实为遗憾。但我始终相信博客上一开始就有的那句话：</p><blockquote><p>只要不失去你的崇高，整个世界都会向你敞开。<br> The world opens itselfbefore those with nobel hearts.</p></blockquote><p>如今国际形势风云变幻，我国正处于百年未有之大变局的关键时期。我们见证了某防毒软件公司因小失误致使全球电脑蓝屏的荒谬，也目睹了国内公司Deepseek 仅需不到三百万张 H800就能完整训练大模型的崛起（PS：就在跨年前几天）。这些事例充分说明了，功成从来都不仅仅在某一个人身上，而是大家齐心协力，聚沙成塔、滴水成海的众志成城。</p><p>2025，对我而言，是一个充满希望，亦是很重要的一年。愿我们都能以乐观的姿态积极面对每一天，心中有目标、有方向，才不会手忙脚乱。</p><p>斗胆在下以拙劣的文笔写出此篇年度总结，祝各位读者在新的一年里能心想事成，做自己想做的事，找到自己心爱的人。祝大家2025 新年快乐，我们 6 月再见。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>年度总结</category>
+      
+      <category>2024</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>杂谈</tag>
+      
+      <tag>年度总结</tag>
+      
+      <tag>碎碎念</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>用 UEFI+GPT 安装 Windows 操作系统</title>
     <link href="/2024/10/03/install-windows-10-with-uefi-and-gpt/"/>
     <url>/2024/10/03/install-windows-10-with-uefi-and-gpt/</url>
